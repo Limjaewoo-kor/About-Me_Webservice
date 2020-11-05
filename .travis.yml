@@ -20,7 +20,7 @@ script: "./gradlew clean build"
 before_deploy:
   - zip -r springboot-webservice ./*
   - mkdir -p deploy
-  - mv springboot-webservice.zip deploy/springboot-webservice.zip
+  - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
 
 deploy:
   - provider: s3
@@ -40,7 +40,8 @@ deploy:
     bucket: freelec-jaewoo-build
     key: freelec-springboot2-webservice.zip
     bundle_type: zip
-    application: freelec-springboot2-webservice-group
+    application: freelec-springboot2-webservice
+    deployment_group: freelec-springboot2-webservice-group
     region: ap-northeast-2
     wait-until-deployed: true
 
