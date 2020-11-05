@@ -34,6 +34,16 @@ deploy:
     local_dir: deploy
     wait_until_deployed : true
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: freelec-jaewoo-build
+    key: freelec-springboot2-webservice.zip
+    bundle_type: zip
+    application: freelec-springboot2-webservice-group
+    region: ap-northeast-2
+    wait-until-deployed: true
+
 # CI 실행 완료 시 메일로 알람
 notifications:
   email:
