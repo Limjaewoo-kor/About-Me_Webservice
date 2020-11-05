@@ -1,7 +1,7 @@
-package com.jojoldu.book.springboot.auth;
+package com.jojoldu.book.springboot.config.auth;
 
-import com.jojoldu.book.springboot.auth.dto.OAuthAttributes;
-import com.jojoldu.book.springboot.auth.dto.SessionUser;
+import com.jojoldu.book.springboot.config.auth.dto.OAuthAttributes;
+import com.jojoldu.book.springboot.config.auth.dto.SessionUser;
 import com.jojoldu.book.springboot.domain.user.User;
 import com.jojoldu.book.springboot.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
