@@ -1,5 +1,4 @@
 language: java
-
 jdk:
   - openjdk8
 
@@ -13,27 +12,30 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
+before_install:
+  - chmod +x gradlew
+
 script: "./gradlew clean build"
 
 before_deploy:
-      - zip -r freelec-springboot2-webservice *
-      - mkdir -p deploy
-      - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
+  - zip -r springboot-webservice ./*
+  - mkdir -p deploy
+  - mv springboot-webservice.zip deploy/springboot-webservice.zip
 
 deploy:
   - provider: s3
-    access_key_id: $AWS_ACCESS_KEY #Travis repo setting에 설정된 값
-    secret_access_key: $AWS_SECRET_KEY #Travis repo settings에 설정된 값
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
 
-    bucket: freelec-jaewoo-build  # S 3 버킷
+    bucket: swchoi-springboot-build
     region: ap-northeast-2
     skip_cleanup: true
-    acl: private # zip파일 접근을 private 으로
-    local_dir: deploy # brfore_deploy에서 생성한 디렉토리
-    wait-until-deployed: true
+    acl: private
+    local_dir: deploy
+    wait_until_deployed : true
 
-    #CI 실행 완료시 메일로 알람
-    notifications:
-      email:
-        recipients:
-          - ljw3944@naver.com
+# CI 실행 완료 시 메일로 알람
+notifications:
+  email:
+    recipients:
+      - ljw3944@naver.com
