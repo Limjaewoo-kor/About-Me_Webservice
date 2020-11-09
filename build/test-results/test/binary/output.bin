@@ -1,5 +1,0 @@
-k16:36:05.761 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'oauth'
-m16:36:05.766 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'real-db'
-j16:36:05.767 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'real'
-k16:36:05.767 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'oauth'
-m16:36:05.767 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'real-db'
