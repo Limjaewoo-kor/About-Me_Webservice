@@ -29,14 +29,16 @@ public class IndexController {
     public String notice_board(Model model, @LoginUser SessionUser user) {
 
         model.addAttribute("posts", postsService.findAllDesc());
-        model.addAttribute("username", user.getName());
+        if(user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return "notice_board";
     }
 
     @GetMapping("/posts/save")
     public String postsSave(Model model, @LoginUser SessionUser user)
     {
-        model.addAttribute("username", user.getName());
+        model.addAttribute("userName", user.getName());
         return "posts-save";
     }
 
@@ -49,23 +51,31 @@ public class IndexController {
 
     @GetMapping("/who")
     public String who(Model model, @LoginUser SessionUser user) {
-        model.addAttribute("username", user.getName());
+        if(user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return "who";
     }
 
     @GetMapping("/project")
     public String project(Model model, @LoginUser SessionUser user) {
-        model.addAttribute("username", user.getName());
+        if(user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return "project";
     }
     @GetMapping("/project2")
     public String project2(Model model, @LoginUser SessionUser user) {
-        model.addAttribute("username", user.getName());
+        if(user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return "project2";
     }
     @GetMapping("/project3")
     public String project3(Model model, @LoginUser SessionUser user) {
-        model.addAttribute("username", user.getName());
+        if(user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return "project3";
     }
 

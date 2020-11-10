@@ -5,27 +5,42 @@
     <!--로그인 기능 영역-->
     <div class="row">
         <div class="col-md-4">
-            <div id="font_margin" style="display: block"> 로그인 : </div>
-            Logged in as:{{username}}
-            <a href="/logout" class="btn btn-info active" role="button">Logout</a>
-            <br><br>
+            <div id="font_margin"> 로그인 :
+                {{#userName}}
+                    Logged in as: <span id="user">{{userName}}</span>
+                    <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+                {{/userName}}
+                {{^userName}}
+                    <a href="/oauth2/authorization/google" style="margin-left: 30px"
+                       class="btn btn-success active" role="button">Google Login</a>
+
+                    <a href="/oauth2/authorization/naver" style="margin-left: 30px"
+                       class="btn btn-secondary active"
+                       role="button">Naver Login</a>
+                {{/userName}}
+            </div>
             <div id="font_style">
+                <div id="font_margin2">
             <a href="/project"> 1. 주차장 금액 정산</a>
             <br><br>
                 <a href="/project2">2. 숨은 카페 찾기</a>
             <br><br>
                 <a href="/project3"> <div style="color: aqua">3. 자기 소개</div></a>
             </div>
+            </div>
         </div>
-        <div class="col-md-6" style="margin-top: 80px; text-align: center">
-            자기 소개 프로젝트는 본인의 자기소개를 위해 만든 페이지로, SpringBoot FrameWork 및 JPA, TDD를 이용하였습니다.<br>
-            또한 구글,네이버 로그인을 구현하였으며, AWS의 EC2서버, S3Management, Codedeploy, IAMManagement, Travis-ci등을<br>
-            활용하여, 자동 배포 및 무중단 배포를 구현하였습니다.<br>
-            개인 포트폴리오 및 이력을 계속 업데이트 할 생각입니다.<br><br><br><br><br>
+        <div class="col-md-6" style="margin-top: 80px; text-align: center; font-size: 18px;" >
+            자기 소개 프로젝트는 본인의 자기소개를 위해 만든 페이지로, SpringBoot FrameWork 및 JPA, TDD를 이용하였습니다.<br><br>
+            또한 구글,네이버 로그인을 구현하였으며,<br><br>
+            AWS의 EC2서버, S3Management, Codedeploy, IAMManagement, Travis-ci등을 활용하여,<br><br>
+            자동 배포 및 무중단 배포를 구현하였습니다.<br><br>
+            개인 포트폴리오 및 이력을 계속 업데이트 할 생각입니다.<br><br><br><br><br><br>
 
             Git Hub location : <a href="https://github.com/Limjaewoo-kor/freelec-springboot2-webservice.git">https://github.com/Limjaewoo-kor/freelec-springboot2-webservice.git</a>
         </div>
     </div>
+</div>
+
 
 
 

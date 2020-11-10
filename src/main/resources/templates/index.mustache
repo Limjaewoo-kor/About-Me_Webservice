@@ -4,7 +4,7 @@
     <!--로그인 기능 영역-->
     <div class="row">
         <div class="col-md-6">
-          <div id="font_margin"> 로그인 : </div>
+          <div id="font_margin"> 로그인 :
             {{#userName}}
                 Logged in as: <span id="user">{{userName}}</span>
                 <a href="/logout" class="btn btn-info active" role="button">Logout</a>
@@ -17,6 +17,7 @@
                    class="btn btn-secondary active"
                    role="button">Naver Login</a>
             {{/userName}}
+          </div>
         </div>
     </div>
     <br>
