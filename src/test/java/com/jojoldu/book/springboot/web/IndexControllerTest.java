@@ -1,15 +1,11 @@
 package com.jojoldu.book.springboot.web;
 
-import com.jojoldu.book.springboot.config.auth.LoginUser;
-import com.jojoldu.book.springboot.config.auth.dto.SessionUser;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
@@ -28,35 +24,4 @@ public class IndexControllerTest {
         //then
         assertThat(body).contains("로그인");
     }
-
-    @Test
-    public void who페이지_로딩() {
-        //when
-        String body = this.restTemplate.getForObject("/who",String.class);
-        //then
-        assertThat(body).contains("Lim Jae Woo 란?");
-    }
-
-    @Test
-    public void project페이지_로딩() {
-        //when
-        String body = this.restTemplate.getForObject("/project",String.class);
-        //then
-        assertThat(body).contains("주차장 금액 정산 프로젝트는");
-    }
-    @Test
-    public void project2페이지_로딩() {
-        //when
-        String body = this.restTemplate.getForObject("/project2",String.class);
-        //then
-        assertThat(body).contains("숨은 카페 찾기 프로젝트");
-    }
-    @Test
-    public void project3페이지_로딩() {
-        //when
-        String body = this.restTemplate.getForObject("/project3",String.class);
-        //then
-        assertThat(body).contains("자기 소개 프로젝트는");
-    }
-
 }
