@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Resume - Start Bootstrap Theme</title>
+    <title>Profile - Limjaewoo</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
@@ -30,6 +30,7 @@
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Project-HiddenC">Project-HiddenC</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Project-Portfolio">Project-Portfolio</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Board">Board</a></li>
         </ul>
     </div>
 </nav>
@@ -39,7 +40,7 @@
     <section class="resume-section" id="about">
         <div class="resume-section-content">
             <h1 class="mb-0">
-                Web developer
+                Web developer<br>
                 <span class="text-primary">Lim jae woo</span>
             </h1>
             <div class="subheading mb-5">
@@ -109,7 +110,6 @@
         </div>
     </section>
     <hr class="m-0" />
-    <hr class="m-0" />
     <!-- project-->
     <section class="resume-section" id="Project-HiddenC">
         <div class="resume-section-content">
@@ -149,7 +149,6 @@
             </div>
         </div>
     </section>
-    <hr class="m-0" />
     <hr class="m-0" />
     <!-- project-->
     <section class="resume-section" id="Project-Portfolio">
@@ -235,6 +234,45 @@
                 </li>
             </ul>
         </div>
+    </section>
+    <hr class="m-0" />
+
+    <!-- project-->
+    <section class="resume-section" id="Board">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Board</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">문의 사항</h3>
+                    <div class="subheading mb-3">문의 사항 작성시 외부 로그인이 필요합니다.</div>
+                                <a href="/posts/save" role="button" class="btn btn-primary">등록</a>
+                            </div>
+            </div>
+                        <br>
+                        <!-- 목록 출력 영역 -->
+                        <table class="table table-horizontal table-bordered">
+                            <thead class="thead-strong">
+
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>최종수정일</th>
+                            </tr>
+                            </thead>
+                            <tbody id="today">
+                            {{#posts}}
+                                <tr>
+                                    <td>{{id}}</td>
+                                    <td><a href="/posts/update/{{id}}"> {{title}} </a></td>
+                                    <td>{{author}}</td>
+                                    <td>{{modifiedDate}}</td>
+                                </tr>
+                            {{/posts}}
+                            </tbody>
+                        </table>
+                    </div>
+
     </section>
     <hr class="m-0" />
 </div>

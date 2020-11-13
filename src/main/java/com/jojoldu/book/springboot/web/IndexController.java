@@ -19,20 +19,11 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
-        if(user != null) {
-            model.addAttribute("userName", user.getName());
-        }
-        return "index";
-    }
-
-    @GetMapping("/board")
-    public String notice_board(Model model, @LoginUser SessionUser user) {
-
         model.addAttribute("posts", postsService.findAllDesc());
         if(user != null) {
             model.addAttribute("userName", user.getName());
         }
-        return "notice_board";
+        return "index";
     }
 
     @GetMapping("/posts/save")
@@ -47,36 +38,6 @@ public class IndexController {
         PostsResponseDto dto = postsService.findById(id);
         model.addAttribute("post", dto);
         return "posts-update";
-    }
-
-    @GetMapping("/who")
-    public String who(Model model, @LoginUser SessionUser user) {
-        if(user != null) {
-            model.addAttribute("userName", user.getName());
-        }
-        return "who";
-    }
-
-    @GetMapping("/project")
-    public String project(Model model, @LoginUser SessionUser user) {
-        if(user != null) {
-            model.addAttribute("userName", user.getName());
-        }
-        return "project";
-    }
-    @GetMapping("/project2")
-    public String project2(Model model, @LoginUser SessionUser user) {
-        if(user != null) {
-            model.addAttribute("userName", user.getName());
-        }
-        return "project2";
-    }
-    @GetMapping("/project3")
-    public String project3(Model model, @LoginUser SessionUser user) {
-        if(user != null) {
-            model.addAttribute("userName", user.getName());
-        }
-        return "project3";
     }
 
 }
