@@ -1,0 +1,36 @@
+{{>layout/header}}
+
+<div class="col-md-12">
+    <!--로그인 기능 영역-->
+    <div class="row">
+        <div class="col-md-4">
+          <div id="font_margin"> 로그인 :
+            {{#userName}}
+                Logged in as: <span id="user">{{userName}}</span>
+                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+            {{/userName}}
+            {{^userName}}
+                <a href="/oauth2/authorization/google" style="margin-left: 30px"
+                   class="btn btn-success active" role="button">Google Login</a>
+
+                <a href="/oauth2/authorization/naver" style="margin-left: 30px"
+                   class="btn btn-secondary active"
+                   role="button">Naver Login</a>
+            {{/userName}}
+          </div>
+            <div id="font_style">
+                <div id="font_margin"><a href="/who">Who?</a><br></div>
+                <div id="font_margin"><a href="/project">Project</a><br></div>
+                <div id="font_margin"> <a href="/board">Board</a><br></div>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-top: 80px; text-align: center; font-size: 18px;" >
+            <br><br><br>숙련된 개발자가 되기 위해<br><br> 꾸준히 노력하는 새싹 임재우입니다.
+        </div>
+    </div>
+</div>
+
+
+
+
+{{>layout/footer}}
