@@ -10099,6 +10099,11 @@ section.resume-section .resume-section-content {
   width: 100%;
 }
 
+/* banner */
+.banner {position: relative; width: 400px; height: 300px; top: 0px;  margin:0 auto; padding:0; overflow: hidden;}
+.banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+.banner ul li {float: left; width: 400px; height: 300px; margin:0; padding:0;}
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
@@ -10111,4 +10116,6 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+
+
 }
