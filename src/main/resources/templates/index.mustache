@@ -90,7 +90,9 @@
             </div>
             <div class="social-icons">
                     {{#userName}}
-                        Logged in as: <span id="user">{{userName}}</span>
+                        <br><br>
+                        <h5 style="color: black">Logged in as: <br><br><span id="user">{{userName}}</span></h5>
+                        <br>
                         <a href="/logout" class="btn btn-info active" role="button">Logout</a>
                     {{/userName}}
                     {{^userName}}
@@ -103,7 +105,7 @@
                     {{/userName}}
                 <br><br><br>
                 <a class="social-icon" href="https://github.com/Limjaewoo-kor?tab=repositories"><i class="fab fa-github"></i></a>
-            </div>
+            </h3>
         </ul>
     </div>
 </nav>
@@ -167,7 +169,7 @@
                 <li>
                     <span class="fa-li"><i class="fas fa-check"></i></span>
                     CI/CD / 하 /
-                    Codedeploy, IAM, S3버킷, Travis-CI를 이용하여, 지속적 통합,배포환경을 만듬.
+                    Codedeploy, IAM, S3버킷, Travis-CI를 이용하여, 지속적 통합,배포환경을 제.
                 </li>
             </ul>
         </div>
@@ -216,9 +218,9 @@
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Parking</h3>
                     <div class="subheading mb-3">Explanation</div>
-                    <p>주차장 금액 정산 프로젝트는 Framework를 사용하지않고, 서블릿과 jsp만을 이용해서 만든 첫 개인 프로젝트입니다.<br>
-                        정규식으로 차량번호를 확인하고, 입차시간과 출차시간을 체크하여, 분당 금액을 계산하여 결제하는 프로젝트를 구현하였습니다.<br>
-                        관리자모드로는 과거 모든 입,출차로그와 분당 금액 및 정기권 금액을 변경할 수 있도록 했습니다.</p>
+                    <p>주차장 금액 정산 프로젝트는 Framework를 사용하지않고, 서블릿과 jsp만을 이용해서 만든 첫 개인 프로젝트.<br>
+                        정규식으로 차량번호를 확인하고, 입차시간과 출차시간을 체크하여, 분당 금액을 계산하여 결제하는 프로젝트를 제작.<br>
+                        관리자모드로는 과거 모든 입,출차로그와 분당 금액 및 정기권 금액을 변경할 수 있도록 제작.</p>
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">2 weeks in August 2020</span></div>
             </div>
@@ -227,10 +229,9 @@
                     <h3 class="mb-0">Issue </h3>
                     <div class="subheading mb-3">3 issues</div>
                     <p>
-                        첫 프로젝트이다보니, 부족한 점이 많았습니다.<br>
-                        1.forward / redirect - forward와 redirect의 차이를 잘 이해하지 못하여 입,출차가 진행되는중 처음으로 돌아와버리는 경우가 발생.<br>
+                        1.forward / redirect - 입,출차가 진행되는중 처음으로 돌아와버리는 경우가 발생.<br>
                         2.scope - application, session, request, page scope의 범위를 잘 이해하지 못하여 <br>관리자 로그인 및 분당,정기권 금액 변경시에 금액이 초기금액으로 돌아오는 경우가 발생.<br>
-                        3.MVC - 가장 기본인 MVC 패턴에 대한 이해가 부족해 초기에 MVC2패턴으로 제작하려한 프로젝트를 MVC1패턴으로 프로젝트를 제작.<br>
+                        3.MVC - 초기에 MVC2패턴으로 제작하려한 프로젝트를 MVC1패턴으로 제작.<br>
                     </p>
                 </div>
             </div>
@@ -241,7 +242,7 @@
                     <p>
                         1.forward / redirect의 차이를 분명히 알기 위하여 구글링을 통해 관련 개념 및 예시를 공부 후 적용하여 해결.<br>
                         2.scope의 범위에 대한 이해도가 부족하여 로그인 관련 예제를 공부하여 scope를 적용하여 해결.<br>
-                        3.MVC1과 2패턴 자체를 잘 알지 못하여, 프로젝트 후반부에 MVC2패턴에 대해 공부하여, 전체 다 갈아엎음으로서 해결.<br>
+                        3.프로젝트 후반부에 MVC2패턴에 대해 공부하여, 전체 다 갈아엎음으로서 해결.<br>
                     </p>
                 </div>
             </div>
@@ -257,8 +258,8 @@
                     <h3 class="mb-0">HiddenC</h3>
                     <div class="subheading mb-3">Explanation</div>
                     <p>숨은 카페 찾기 프로젝트는 SpringFramework를 사용하였으며, 프렌차이즈 외에 집주변 및 동네에 숨은 맛집 카페에 대한 정보를<br>
-                        공유하고자 만든 협업 프로젝트입니다. 회원 가입 및 지도 기반 api를 통하여 카페 위치에 대한 정보를 제공하며, <br>
-                        카페 등록 및 삭제 회원 등급 설정, 회원 블락 및 언블락등을 구현하였으며 쓴맛,신맛,원두 판매등 검색시 카테고리를 설정할 수 있도록 했습니다.</p>
+                        공유하고자 만든 협업 프로젝트. 회원 가입 및 지도 기반 api를 통하여 카페 위치에 대한 정보를 제공하며, <br>
+                        카페 등록 및 삭제 회원 등급 설정, 회원 블락 및 언블락 및 쓴맛,신맛,원두 판매등 검색시 카테고리를 설정할 수 있도록 제작.</p>
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">1 month in September 2020</span></div>
             </div>
@@ -296,9 +297,9 @@
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Portfolio</h3>
                     <div class="subheading mb-3">Explanation</div>
-                    <p>자기 소개 프로젝트는 본인의 자기소개를 위해 만든 페이지로, SpringBoot FrameWork 및 JPA, TDD를 이용하였습니다.<br>
-                    또한 구글,네이버 로그인을 구현하였으며, AWS의 EC2서버, S3Management, Codedeploy, IAMManagement, Travis-ci등을 활용하여,
-                        자동 배포 및 무중단 배포를 구현하였습니다. 개인 포트폴리오 및 이력을 계속 업데이트 할 생각입니다.</p>
+                    <p>자기 소개 프로젝트는 본인의 자기소개를 위해 만든 페이지로, SpringBoot FrameWork 및 JPA, TDD를 사용하여 제작.<br>
+                        구글,네이버 로그인을 구현하였으며, AWS의 EC2서버, S3Management, Codedeploy, IAMManagement, Travis-ci등을 활용하여,
+                        자동 배포 및 무중단 배포를 구현. 개인 포트폴리오 및 이력을 계속 업데이트 할 예정.</p>
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">Currently in progress</span></div>
             </div>
@@ -317,7 +318,7 @@
                     <h3 class="mb-0">Solution</h3>
                     <div class="subheading mb-3">2 solutions</div>
                     <p>
-                        1.동영상 강의 및 책과 인터넷 자료를 참고하여, TDD와  JPA에 대해서 공부함.<br>
+                        1.동영상 강의 및 책과 인터넷 자료를 참고하여, TDD와  JPA에 대해서 공부.<br>
                         2.여러 자료들을 참고하며 뭐가 무슨 역할을 하는지 뜯어내며, 바뀐 명령어 중 같은 기능을 하는 명령어들을 찾아내어 해결.<br>
                     </p>
                 </div>
