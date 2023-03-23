@@ -1,7 +1,9 @@
 # About-Me_Webservice
 
+
 - 포트폴리오 프로젝트로 Springboot,JPA,TDD,AWS등을 이용하여 제작. 
-- 구글 및 네이버 로그인을 이용.
+- 구글 및 네이버 로그인 API 이용.
+- Codedeploy. IAM, S3버킷, Travis-CI를 이용하여 지속적 통합 배포 환경 제작.
 
 <img width="1710" alt="스크린샷 2021-08-24 오전 1 29 16" src="https://user-images.githubusercontent.com/68491295/130486123-bca21e76-6c48-416d-a46c-ce59e7950ead.png">
 
